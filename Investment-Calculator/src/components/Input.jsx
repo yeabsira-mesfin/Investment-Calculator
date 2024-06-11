@@ -1,21 +1,7 @@
 import { React, useState } from "react";
 
-const Input = ({ inputValue, calculateInv }) => {
-  const [userInput, setUserInput] = useState({
-    initialInvestment: 1000,
-    annualInvestment: 1200,
-    expectedReturn: 6,
-    duration: 10,
-  });
+const Input = ({ userInput, handleChange }) => {
 
-  function handleChange(inputIdentifier, newValue) {
-    setUserInput((prevUserInput) => {
-      return {
-        ...prevUserInput,
-        [inputIdentifier]: newValue,
-      };
-    });
-  }
   //   function intialInv(event) {
   //     setIntitalInvestMent(event.target.value);
   //   }
@@ -28,7 +14,7 @@ const Input = ({ inputValue, calculateInv }) => {
   //   function dur(event) {
   //     setDuration(event.target.value);
   //   }
-  console.log((calculateInv(userInput)))
+  
   return (
     <section id="user-input">
       <div className="input-group">
